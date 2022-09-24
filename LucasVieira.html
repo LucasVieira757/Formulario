@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title> Formulario
+	</title>
+
+	<meta charset="utf-8">
+
+	<style>
+		div {
+			margin: 10px;
+		}
+
+		form,
+		h2 {
+			width: 49%;
+			margin: auto;
+			border: 1px solid#2EC4B6;
+			border-radius: 5 px;
+			background-color: #ec9a29;
+			padding: 5px;
+			text-align: center
+			
+		}
+
+		body {
+			background-color: #011627;
+		}
+
+		h2 {
+			margin-bottom: 10px;
+			margin-top: 5px;
+			text-align: center
+		}
+		.enviar{
+			width: 200px;
+    border-radius: 200px;
+    
+		}
+		
+	</style>
+	<script>
+		function enviar() {
+			alert("Formulario Enviado com sucesso!!")
+		}
+		function mostrarpass() {
+			var senha = document.getElementById("cpass");
+			if (senha.type === "password")
+				senha.type = "text";
+			else
+				senha.type = "password"
+		}
+
+
+	</script>
+
+</head>
+
+
+<body>
+	<h2> Lucas Vieira Santos </h2>
+
+	<form action="funcao.php">
+		<div>
+			<label for="ctext">Login: </label>
+			<input type="text" name="ctext" id="ctext" maxlength="8"/>
+		</div>
+
+		<div>
+			<label for="cpass"> Senha:</label>
+			<input type="password" name="cpass" id="cpass" maxlength="6" /> <br>
+			<input type="checkbox" onclick="mostrarpass" > 
+			<label for="">Mostrar Senha</label>
+
+		</div>
+
+
+		</div>
+		<div>
+			<input class="enviar" type="submit" value="Acessar" onclick="enviar ()">
+			
+
+		</div>
+	</form>
+
+</body>
+
+</html>
